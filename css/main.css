@@ -1,0 +1,23 @@
+:root {
+    --primary-color: #8c7b6e;
+    --secondary-color: #4a4a52;
+    --background-color: #f8f6f3;
+    --text-color: #1c1c1e;
+    --white-color: #ffffff;
+    --black-color: #000000;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth ;
+}
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-weight: 300;
+    overflow-x: hidden;
+}
