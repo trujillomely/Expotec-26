@@ -1,0 +1,14 @@
+/*LOGIN, REGISTRO Y ACTIVAR CUENTA*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --primary-color: #8c7b6e;
+    --secondary-color: #4a4a52;
+    --background-color: #f8f6f3;
+    --text-color: #1c1c1e;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Jost', sans-serif;
+    --trans: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
