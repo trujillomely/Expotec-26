@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #8c7b6e;
+    --secondary-color: #4a4a52;
+    --background-color: #f8f6f3;
+    --text-color: #1c1c1e;
+    --white-color: #ffffff;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Jost', sans-serif;
+    --dorado: #f2bf4a;
+    --dorado-hover: #e1a82b;
+    --lino-puro: #f1ebe1;
+    --gris-perla: #e2dcda;
+    --carbon-oxford: #1c1c1e;
+    --gris-pizarra: #4a4a52;
+    --siena-tostada: #8c7b6e;
+    --trans: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    letter-spacing: 0;
+}
+
+.page-hero {
+    background:
+        linear-gradient(90deg, rgba(28, 28, 30, .88), rgba(74, 74, 82, .64)),
+        url("../img/Proyecto nuevo.png") center / cover no-repeat;
+    color: var(--white-color);
+    padding: 6rem 0 5.4rem;
+}
+
+.page-kicker {
+    color: var(--dorado);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    margin-bottom: .9rem;
+    text-transform: uppercase;
+}
+
+.page-title,
+.section-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.page-title {
+    font-size: clamp(3rem, 6vw, 5.7rem);
+    line-height: .94;
+    margin-bottom: 1.35rem;
+    max-width: 820px;
+}
+
+.page-lead {
+    color: rgba(255, 255, 255, .84);
+    font-size: 1.12rem;
+    line-height: 1.85;
+    max-width: 780px;
+}
+
+.section-space {
+    padding: 5rem 0;
+}
+
+.section-space-sm {
+    padding: 3.8rem 0;
+}
+
+.section-title {
+    color: var(--carbon-oxford);
+    font-size: clamp(2.15rem, 4vw, 3.65rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.section-copy {
+    color: var(--gris-pizarra);
+    font-size: 1.03rem;
+    line-height: 1.85;
+}
+
+.light-band {
+    background: var(--lino-puro);
+}
+
+.white-band {
+    background: var(--white-color);
+}
+
+.stats-grid,
+.values-grid,
+.team-grid,
+.insurer-grid,
+.service-grid,
+.contact-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stat-card,
+.value-card,
+.team-card,
+.insurer-card,
+.service-detail-card,
+.contact-card {
+    background: var(--white-color);
+    border: 1px solid var(--gris-perla);
+    border-radius: .45rem;
+    box-shadow: 0 18px 55px rgba(28, 28, 30, .05);
+}
+
+.stat-card {
+    padding: 1.45rem;
+}
+
+.stat-card strong {
+    color: var(--siena-tostada);
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.35rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: .5rem;
+}
+
+.stat-card span {
+    color: var(--gris-pizarra);
+    font-weight: 600;
+}
+
+.story-image {
+    background: var(--lino-puro);
+    border: 1px solid var(--gris-perla);
+    border-radius: .45rem;
+    overflow: hidden;
+}
+
+.story-image img {
+    display: block;
+    height: 100%;
+    min-height: 360px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.values-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.value-card,
+.service-detail-card,
+.contact-card {
+    padding: 1.55rem;
+}
+
+.value-icon,
+.service-icon,
+.contact-icon {
+    align-items: center;
+    background: var(--lino-puro);
+    border: 1px solid rgba(140, 123, 110, .28);
+    border-radius: 50%;
+    color: var(--siena-tostada);
+    display: inline-flex;
+    font-size: .82rem;
+    font-weight: 800;
+    height: 3rem;
+    justify-content: center;
+    margin-bottom: 1.15rem;
+    width: 3rem;
+}
+
+.value-card h3,
+.team-card h3,
+.insurer-card h3,
+.service-detail-card h3,
+.contact-card h3 {
+    color: var(--carbon-oxford);
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: .75rem;
+}
+
+.value-card p,
+.team-card p,
+.insurer-card p,
+.service-detail-card p,
+.contact-card p {
+    color: var(--gris-pizarra);
+    line-height: 1.75;
+    margin: 0;
+}
+
+.team-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.team-card {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem;
+}
+
+.team-avatar {
+    align-items: center;
+    background: var(--dorado);
+    border-radius: 50%;
+    color: var(--carbon-oxford);
+    display: inline-flex;
+    flex: 0 0 3.4rem;
+    font-weight: 800;
+    height: 3.4rem;
+    justify-content: center;
+    width: 3.4rem;
+}
+
+.team-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: .2rem;
+}
+
+.team-card p {
+    font-size: .94rem;
+}
+
+.insurer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.insurer-card {
+    padding: 1.45rem;
+}
+
+.insurer-logo {
+    align-items: flex-start;
+    background: var(--carbon-oxford);
+    border-radius: .4rem;
+    color: var(--white-color);
+    display: inline-flex;
+    flex-direction: column;
+    gap: .1rem;
+    justify-content: center;
+    margin-bottom: 1.15rem;
+    min-height: 4.35rem;
+    padding: .75rem .95rem;
+    width: min(100%, 13.5rem);
+}
+
+.insurer-logo span,
+.insurer-logo small {
+    display: block;
+    line-height: 1;
+}
+
+.insurer-logo span {
+    font-size: clamp(1.15rem, 2vw, 1.55rem);
+    font-weight: 900;
+}
+
+.insurer-logo small {
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    opacity: .86;
+    text-transform: uppercase;
+}
+
+.insurer-logo-gt {
+    background: #173f35;
+}
+
+.insurer-logo-roble {
+    background: #12396d;
+}
+
+.insurer-logo-mapfre {
+    background: #d71920;
+}
+
+.insurer-logo-assa {
+    background: #0f5b96;
+}
+
+.insurer-logo-universales {
+    background: #164f8f;
+}
+
+.insurer-logo-rural,
+.insurer-logo-banrural {
+    background: #1d7a3a;
+}
+
+.insurer-logo-agromercantil {
+    background: #006c67;
+}
+
+.insurer-logo-palig {
+    background: #123c69;
+}
+
+.insurer-logo-bmi {
+    background: #233f8f;
+}
+
+.insurer-logo-confio {
+    background: #8d1f2d;
+}
+
+.insurer-logo-otras {
+    background: var(--siena-tostada);
+}
+
+.insurer-meta,
+.service-list,
+.page-list {
+    display: grid;
+    gap: .75rem;
+    list-style: none;
+    margin: 1.15rem 0 0;
+    padding: 0;
+}
+
+.insurer-meta li,
+.service-list li,
+.page-list li {
+    color: var(--gris-pizarra);
+    display: flex;
+    gap: .7rem;
+    line-height: 1.6;
+}
+
+.insurer-meta li::before,
+.service-list li::before,
+.page-list li::before {
+    background: var(--dorado);
+    border-radius: 50%;
+    content: "";
+    flex: 0 0 .48rem;
+    height: .48rem;
+    margin-top: .55rem;
+    width: .48rem;
+}
+
+.service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.service-detail-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.service-note {
+    background: var(--carbon-oxford);
+    color: var(--white-color);
+    padding: 4rem 0;
+}
+
+.service-note .section-title,
+.service-note .section-copy {
+    color: var(--white-color);
+}
+
+.contact-layout {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: .9fr 1.1fr;
+}
+
+.contact-grid {
+    grid-template-columns: 1fr;
+}
+
+.contact-card a {
+    color: var(--siena-tostada);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contact-form {
+    background: var(--white-color);
+    border: 1px solid var(--gris-perla);
+    border-radius: .45rem;
+    box-shadow: 0 18px 55px rgba(28, 28, 30, .05);
+    padding: clamp(1.4rem, 3vw, 2.4rem);
+}
+
+.contact-form label {
+    color: var(--carbon-oxford);
+    font-weight: 700;
+    margin-bottom: .45rem;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+    border-color: var(--gris-perla);
+    border-radius: .35rem;
+    padding: .82rem .9rem;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color: var(--siena-tostada);
+    box-shadow: 0 0 0 .2rem rgba(140, 123, 110, .16);
+}
+
+.btn-arco {
+    --bs-btn-color: var(--carbon-oxford);
+    --bs-btn-bg: var(--dorado);
+    --bs-btn-border-color: var(--dorado);
+    --bs-btn-hover-color: var(--carbon-oxford);
+    --bs-btn-hover-bg: var(--dorado-hover);
+    --bs-btn-hover-border-color: var(--dorado-hover);
+    border-radius: .35rem;
+    font-weight: 800;
+    padding: .9rem 1.25rem;
+    text-transform: uppercase;
+}
+
+@media (max-width: 991.98px) {
+    .stats-grid,
+    .values-grid,
+    .team-grid,
+    .insurer-grid,
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .page-hero {
+        padding: 4.4rem 0 4rem;
+    }
+
+    .section-space,
+    .section-space-sm {
+        padding: 3.25rem 0;
+    }
+
+    .stats-grid,
+    .values-grid,
+    .team-grid,
+    .insurer-grid,
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-image img {
+        min-height: 260px;
+    }
+}

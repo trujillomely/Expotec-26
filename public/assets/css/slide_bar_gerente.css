@@ -1,0 +1,123 @@
+/* Paleta de Colores y Variables */
+:root {
+    --sidebar-bg: #4a4a4e;
+    --sidebar-hover: #5a5a5e;
+    --text-color: #d1d1d1;
+    --active-bg: #e6d5c3; 
+    --active-text: #2d2d2d;
+    --transition-speed: 0.3s;
+}
+
+/* Reset básico para que el d-flex ocupe toda la pantalla */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fcf9f6;
+}
+
+/* Contenedor principal para que el sidebar se estire */
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+/* Sidebar Estilos */
+.sidebar {
+    min-width: 260px;
+    max-width: 260px;
+    background: var(--sidebar-bg);
+    color: var(--text-color);
+    transition: all var(--transition-speed);
+    display: flex;
+    flex-direction: column; /* Permite usar flex-grow en el cuerpo */
+    box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+}
+
+/* Header con Logo */
+.sidebar-header {
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-header img {
+    width: 40px;
+    height: auto;
+    margin-right: 12px;
+    filter: brightness(0) invert(1); /* Pone el logo blanco si es oscuro */
+}
+
+.sidebar-header h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+}
+
+.sidebar-header p {
+    font-size: 0.75rem;
+    margin: 0;
+    opacity: 0.6;
+}
+
+/* CUERPO DEL MENÚ (La parte que empuja) */
+.menu-body {
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+}
+
+/* FOOTER DEL MENÚ (Configuración al fondo) */
+.sidebar-footer {
+    margin-top: auto; /* Refuerzo de seguridad para ir al fondo */
+    padding-bottom: 20px;
+}
+
+/* Estilos de los Enlaces */
+.sidebar ul li {
+    padding: 2px 15px;
+    list-style: none;
+}
+
+.sidebar ul li a {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 10px;
+    transition: all var(--transition-speed) ease;
+}
+
+.sidebar ul li a i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Hover y Activo */
+.sidebar ul li a:hover {
+    background: var(--sidebar-hover);
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.sidebar ul li.active a {
+    background: var(--active-bg);
+    color: var(--active-text) !important;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -260px;
+        position: absolute;
+        height: 100%;
+        z-index: 999;
+    }
+    .sidebar.active {
+        margin-left: 0;
+    }
+}

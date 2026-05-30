@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #f4efe7;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar{
+    width: 250px;
+    height: 100vh;
+    background: #efe7dc;
+    border-left: 4px solid #7b2cff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+
+/* LOGO */
+
+.logo h2{
+    margin: 0;
+    color: #7b2cff;
+    font-size: 22px;
+}
+
+.logo p{
+    margin-top: 5px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* MENU */
+
+.menu{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu a,
+.footer-menu a{
+    text-decoration: none;
+    color: #555;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.menu a:hover,
+.footer-menu a:hover{
+    background: #ddd1ff;
+    color: #7b2cff;
+}
+
+/* BOTON */
+
+.btn-contacto{
+    width: 100%;
+    background: #b9926a;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.btn-contacto:hover{
+    background: #a57d57;
+}
+
+/* FOOTER */
+
+.footer-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

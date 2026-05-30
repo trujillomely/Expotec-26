@@ -22,6 +22,51 @@ switch($url){
 
     break;
 
+    case 'acerca-de':
+    case 'acerca_de':
+
+        require_once ROOT_PATH .
+        '/app/controllers/HomeController.php';
+
+        $controller = new HomeController();
+
+        $controller->acercaDe();
+
+    break;
+
+    case 'aseguradoras':
+
+        require_once ROOT_PATH .
+        '/app/controllers/HomeController.php';
+
+        $controller = new HomeController();
+
+        $controller->aseguradoras();
+
+    break;
+
+    case 'servicios':
+
+        require_once ROOT_PATH .
+        '/app/controllers/HomeController.php';
+
+        $controller = new HomeController();
+
+        $controller->servicios();
+
+    break;
+
+    case 'contacto':
+
+        require_once ROOT_PATH .
+        '/app/controllers/HomeController.php';
+
+        $controller = new HomeController();
+
+        $controller->contacto();
+
+    break;
+
     /*
     |--------------------------------------------------------------------------
     | LOGIN
