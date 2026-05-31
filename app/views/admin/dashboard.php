@@ -1,6 +1,6 @@
 <?php
 
-include '../app/views/layouts/navbar.php';
+include ROOT_PATH . '/app/views/layouts/navbar.php';
 
 ?>
 
@@ -44,6 +44,10 @@ include '../app/views/layouts/navbar.php';
 
         </div>
 
+    </div>
+
+    <div class="mt-4">
+        <a href="?url=logout" class="btn btn-danger">Cerrar sesión</a>
     </div>
 
 </div>

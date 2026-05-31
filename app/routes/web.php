@@ -90,7 +90,7 @@ switch($url){
     |--------------------------------------------------------------------------
     */
 
-    case 'auth':
+    case 'authenticate':
 
         require_once ROOT_PATH .
         '/app/controllers/AuthController.php';
@@ -115,6 +115,57 @@ switch($url){
         $controller = new AuthController();
 
         $controller->activateAccount();
+
+    break;
+
+    /*
+    |--------------------------------------------------------------------------
+    | ADMIN DASHBOARD
+    |--------------------------------------------------------------------------
+    */
+
+    case 'admin/dashboard':
+
+        require_once ROOT_PATH .
+        '/app/controllers/AdminController.php';
+
+        $controller = new AdminController();
+
+        $controller->dashboard();
+
+    break;
+
+    /*
+    |--------------------------------------------------------------------------
+    | GERENTE DASHBOARD
+    |--------------------------------------------------------------------------
+    */
+
+    case 'gerente/dashboard':
+
+        require_once ROOT_PATH .
+        '/app/controllers/GerenteController.php';
+
+        $controller = new GerenteController();
+
+        $controller->dashboard();
+
+    break;
+
+    /*
+    |--------------------------------------------------------------------------
+    | CLIENTE DASHBOARD
+    |--------------------------------------------------------------------------
+    */
+
+    case 'cliente/dashboard':
+
+        require_once ROOT_PATH .
+        '/app/controllers/ClienteController.php';
+
+        $controller = new ClienteController();
+
+        $controller->dashboard();
 
     break;
 

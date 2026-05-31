@@ -3,9 +3,9 @@
 class Database {
 
     private $server = "localhost";
-    private $database = "Corredor_Seguros";
-    private $username = "sa";
-    private $password = "123456";
+    private $database = "u620489415_database";
+    private $username = "u620489415_ArcoSeguros";
+    private $password = "Trujillos20@7";
 
     public $conn;
 
@@ -15,10 +15,7 @@ class Database {
 
             $this->conn = new PDO(
 
-                "sqlsrv:Server="
-                .$this->server.
-                ";Database="
-                .$this->database,
+                "mysql:host=" . $this->server . ";dbname=" . $this->database . ";charset=utf8mb4",
 
                 $this->username,
                 $this->password

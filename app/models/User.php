@@ -1,12 +1,12 @@
 <?php
 
-require_once '../app/config/database.php';
+require_once ROOT_PATH . '/app/config/database.php';
 
 class User {
 
     private $conn;
 
-    private $table = "[user]";
+    private $table = 'user';
 
     public function __construct(){
 
@@ -21,8 +21,8 @@ class User {
             SELECT
                 u.*,
                 r.name AS role_name
-            FROM [user] u
-            INNER JOIN [role] r
+            FROM `user` u
+            INNER JOIN `role` r
                 ON u.id_role = r.id_role
             WHERE u.email = :email
             AND u.status = 1

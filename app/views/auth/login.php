@@ -77,7 +77,7 @@
 
             <?php unset($_SESSION['error']); endif; ?>
 
-            <form action="?url=auth"
+            <form action="?url=authenticate"
             method="POST">
 
                 <!-- EMAIL -->

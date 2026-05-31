@@ -1,12 +1,12 @@
 <?php
 
-require_once '../app/models/User.php';
+require_once ROOT_PATH . '/app/models/User.php';
 
 class AuthController {
 
     public function login(){
 
-        require_once '../app/views/auth/login.php';
+        require_once ROOT_PATH . '/app/views/auth/login.php';
 
     }
 
@@ -94,7 +94,12 @@ class AuthController {
                 break;
             }
 
+            exit;
+
         }
+
+        header('Location: ?url=login');
+        exit;
 
     }
     public function activateAccount(){
