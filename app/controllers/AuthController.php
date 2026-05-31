@@ -62,35 +62,32 @@ class AuthController {
             $_SESSION['role'] =
             $user['role_name'];
 
+            $_SESSION['role_id'] =
+            $user['role_id'];
+
             $_SESSION['avatar'] =
             $user['avatar_url'];
 
             // REDIRECCIONAR SEGÚN ROL
 
-            switch(strtolower($user['role_name'])){
+            switch($user['role_id']){
 
-                case 'administrador':
-
+                case 1:
                     header(
                         'Location: ?url=admin/dashboard'
                     );
-
                 break;
 
-                case 'gerente':
-
+                case 2:
                     header(
                         'Location: ?url=gerente/dashboard'
                     );
-
                 break;
 
                 default:
-
                     header(
                         'Location: ?url=cliente/dashboard'
                     );
-
                 break;
             }
 
@@ -113,6 +110,6 @@ class AuthController {
         session_destroy();
 
         header('Location: ?url=login');
-
+        exit;
     }
 }

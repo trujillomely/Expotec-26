@@ -1,55 +1,21 @@
-<link rel="stylesheet" href="/Expotec%2026/public/assets/css/slidebar_cliente.css">
-<div class="sidebar">
-
-    <div class="logo">
-        <h2>Arco Seguros</h2>
-        <p>Bienvenido Mentor</p>
+<aside class="panel-sidebar cliente">
+    <div class="sidebar-brand">
+        <img src="assets/img/logo.png" alt="Arco Seguros">
+        <div>
+            <h2>Arco Seguros</h2>
+            <p>Cliente</p>
+        </div>
     </div>
 
-    <div class="menu">
+    <nav class="sidebar-nav">
+        <a href="?url=cliente/dashboard" class="active"><i class="bi bi-house"></i>Inicio</a>
+        <a href="#"><i class="bi bi-file-earmark-text"></i>Mis pólizas</a>
+        <a href="#"><i class="bi bi-file-earmark-medical"></i>Reclamos</a>
+        <a href="#"><i class="bi bi-wallet2"></i>Pagos</a>
+        <a href="#"><i class="bi bi-person"></i>Perfil</a>
+    </nav>
 
-        <a href="#">
-            <i class="fas fa-home"></i>
-            Seguros
-        </a>
-
-        <a href="#">
-            <i class="fas fa-file"></i>
-            Contratos
-        </a>
-
-        <a href="#">
-            <i class="fas fa-chart-bar"></i>
-            Reclamos
-        </a>
-
-        <a href="#">
-            <i class="fas fa-user"></i>
-            Perfil
-        </a>
-
+    <div class="sidebar-footer">
+        <a href="?url=logout"><i class="bi bi-box-arrow-right"></i>Cerrar sesión</a>
     </div>
-
-    <div class="footer-menu">
-
-        <button class="btn-contacto">
-            Contactar con la empresa
-        </button>
-
-        <a href="#">
-            <i class="fas fa-cog"></i>
-            Configuración
-        </a>
-
-        <a href="#">
-            <i class="fas fa-sign-out-alt"></i>
-            Cerrar sesión
-        </a>
-
-    </div>
-
-</div>
-
-<!-- ICONOS -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</aside>

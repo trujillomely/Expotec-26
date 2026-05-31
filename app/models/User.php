@@ -20,6 +20,7 @@ class User {
         $query = "
             SELECT
                 u.*,
+                r.id_role AS role_id,
                 r.name AS role_name
             FROM `user` u
             INNER JOIN `role` r

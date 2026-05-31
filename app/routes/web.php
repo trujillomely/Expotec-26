@@ -118,6 +118,17 @@ switch($url){
 
     break;
 
+    case 'logout':
+
+        require_once ROOT_PATH .
+        '/app/controllers/AuthController.php';
+
+        $controller = new AuthController();
+
+        $controller->logout();
+
+    break;
+
     /*
     |--------------------------------------------------------------------------
     | ADMIN DASHBOARD
@@ -132,6 +143,39 @@ switch($url){
         $controller = new AdminController();
 
         $controller->dashboard();
+
+    break;
+
+    case 'admin/users':
+
+        require_once ROOT_PATH .
+        '/app/controllers/AdminController.php';
+
+        $controller = new AdminController();
+
+        $controller->users();
+
+    break;
+
+    case 'admin/roles':
+
+        require_once ROOT_PATH .
+        '/app/controllers/AdminController.php';
+
+        $controller = new AdminController();
+
+        $controller->roles();
+
+    break;
+
+    case 'admin/permissions':
+
+        require_once ROOT_PATH .
+        '/app/controllers/AdminController.php';
+
+        $controller = new AdminController();
+
+        $controller->permissions();
 
     break;
 
