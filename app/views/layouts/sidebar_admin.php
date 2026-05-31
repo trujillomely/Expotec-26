@@ -43,16 +43,29 @@
         const layout = document.querySelector('.panel-layout');
         const sidebarToggle = document.querySelector('.sidebar-toggle');
 
+        // Toggle sidebar en pantallas pequeñas
         sidebarToggle?.addEventListener('click', function () {
             sidebar?.classList.toggle('active');
             layout?.classList.toggle('sidebar-open');
         });
 
+        // Expandir/cerrar secciones como acordeón
         document.querySelectorAll('.sidebar-section-title').forEach(function (title) {
             title.addEventListener('click', function () {
                 const section = title.closest('.sidebar-section');
-                section?.classList.toggle('expanded');
+
+                // Cerrar todas las demás secciones
+                document.querySelectorAll('.sidebar-section').forEach(function (s) {
+                    if (s !== section) {
+                        s.classList.remove('expanded');
+                    }
+                });
+
+                // Alternar la sección actual
+                section.classList.toggle('expanded');
             });
         });
     });
 </script>
+
+
